@@ -1,4 +1,10 @@
 # Linux_Networks
+created by Enoch Masih
 This is a Shell Script that will show your Network Information and save it to a text file 
+
 Instructions to run the script
 The name of the script is Networks.sh. To run the script please copy the script to your system. and make sure you have permissions to execute the script. Depending on how the script is copied over to the system, there is a good chance that the permissions have changed. Once copied to your system, you can check the permissions of the file with the ls command and choosing the -l option. This will show you the permissions of the file as well as the owners. You will have to use the chown command in super user mode to change the owner to yourself. Change the permissions of the file to make it executable using the chmod command. Once done you will be able to execute the script. The script does not require the user to create any special directories. The file that is created is saved in the user’s home directory for ease of access. Remember, if the script is run again, the data is not appended to the file but instead it is replaced. 
+The script
+The script saves as a text file to the user’s home directory so it can be opened on most OS. The script will provide information such as the IP Address, DNS, open ports, as well as ping google.com and present the results. The IP address is pulled up by using the hostname -I command. I used this command because it simply returns the IP address so there is no need to edit it using other commands like grep.  The DNS address information already exists in the etc/ file and can be isolated and pulled up using the grep command. I also used the grep command in the open ports to show only ports that are listening. I used the SS command which is the newer version of the network status command. The ping command has been limited by a counter to only show 3 counts of it.
+Current Networks Setup 
+I am using an SMB protocol to transfer the file into the Linux operating system (both Debian and CentOS). I suspect because I am copying in windows that the permissions change accordingly. Below is a screenshot of the script running in both environments. 
